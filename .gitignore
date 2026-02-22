@@ -1,0 +1,15 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.mw
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Generated LaTeX intermediate (Quarto produces index.tex from index.qmd)
+index.tex
+
+# kaobook upstream clone (source files are copied to project root)
+kaobook/

@@ -1,0 +1,71 @@
+% Minimal test file for kaohandt class
+\documentclass[fontsize=11pt]{kaohandt}
+
+% Language support
+\usepackage[english]{babel}
+\usepackage[english=british]{csquotes}
+
+% Dummy text for testing
+\usepackage{blindtext}
+
+\begin{document}
+
+%---------------------------------------------
+% Title block
+%---------------------------------------------
+\title{Kaohandt Test Document}
+\author{Test Author}
+\date{\today}
+
+\maketitle
+
+% Margin table of contents
+\margintoc
+
+%---------------------------------------------
+% Abstract
+%---------------------------------------------
+\begin{abstract}
+\noindent
+This is a minimal test document using the \texttt{kaohandt} class from the
+kaobook project. Its purpose is to verify that the class and all required
+style files are correctly found by XeLaTeX.
+\end{abstract}
+
+\medskip
+
+%---------------------------------------------
+% Main body
+%---------------------------------------------
+
+\section{Introduction}
+
+This document tests the basic layout of the \texttt{kaohandt} class.
+\sidenote{This is a margin note (sidenote) to verify that the wide-margin
+layout works correctly under XeLaTeX.}
+
+\blindtext
+
+\section{Sample Content}
+
+Here is a second section with more filler text to exercise the layout.
+
+\blindtext[2]
+
+\subsection{A Subsection}
+
+The \texttt{kaohandt} class inherits from \texttt{scrartcl} (KOMA-Script) and
+loads the shared \texttt{kao} style. Key features include wide margins for
+annotations, a customised title block, and support for sidenotes.
+
+\sidenote{A second sidenote in the second section.}
+
+\blindtext
+
+\appendix
+
+\section{Appendix}
+
+\blindtext
+
+\end{document}

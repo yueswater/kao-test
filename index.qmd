@@ -1,0 +1,47 @@
+---
+title: "Quarto + kaohandt: Minimal Working Example"
+author: "Test Author"
+date: today
+---
+
+## Introduction
+
+This document is a minimal working example (MWE) of a Quarto project rendered
+with the `kaohandt` document class from the **kaobook** family. It uses
+**XeLaTeX** as the PDF engine and exercises the wide-margin layout that
+`kaohandt` provides.
+
+## Margin Notes and Layout
+
+The `kaohandt` class is based on `scrartcl` (KOMA-Script) and reserves a
+generous right margin for annotations. Below we place a margin note to verify
+that the sidenote machinery is functional.
+
+This sentence demonstrates the margin-note feature.\marginnote{This is a test
+sidenote. It appears in the outer margin thanks to the \texttt{marginnote}
+package loaded by \texttt{kao.sty}.}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+## Sample Equation
+
+The wider margin also benefits mathematical documents. Here is the
+Maxwell--Faraday equation in differential form:
+
+$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+$$
+
+And a numbered inline equation testing the math renderer:
+
+$$
+e^{i\pi} + 1 = 0
+$$
+
+## Conclusion
+
+If this document compiles successfully, the `kaohandt` class is correctly
+configured for Quarto with XeLaTeX, including local `.cls` and `.sty` file
+resolution and system font support via `fontspec`.
