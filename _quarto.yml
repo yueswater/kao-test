@@ -11,3 +11,12 @@ format:
     template: kao-template.tex
     template-partials:
       - pandoc.tex
+      - tables.tex
+    mainfont: "LibertinusSerif"
+    mainfontoptions:
+      - "Path=./fonts/"
+      - "Extension=.otf"
+      - "UprightFont=*-Regular"
+      - "BoldFont=*-Bold"
+      - "ItalicFont=*-Italic"
+      - "BoldItalicFont=*-BoldItalic"

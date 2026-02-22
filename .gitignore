@@ -13,3 +13,6 @@ index.tex
 
 # kaobook upstream clone (source files are copied to project root)
 kaobook/
+
+/.quarto/
+**/*.quarto_ipynb

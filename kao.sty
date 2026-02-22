@@ -1142,16 +1142,33 @@
 	\RequirePackage{amssymb} % Must be loaded before unicode-math
 	\RequirePackage[force]{filehook} % Fixes an error
 	\RequirePackage{unicode-math} % Math fonts in xetexorluatex
-	\setromanfont[ % Libertinus Serif font
-		Scale=1.04
-	]{Libertinus Serif}
-	\setsansfont[ % Libertinus Sans font
-		Scale=1
-	]{Libertinus Sans}
-	\setmonofont[ % Libertinus Mono font
-		Scale=.89
-	]{Liberation Mono}
-	\setmathfont{Libertinus Math} % Libertinus Math font
+	\setromanfont[ % Libertinus Serif font (local)
+		Scale=1.04,
+		Path=./fonts/,
+		Extension=.otf,
+		UprightFont=*-Regular,
+		BoldFont=*-Bold,
+		ItalicFont=*-Italic,
+		BoldItalicFont=*-BoldItalic
+	]{LibertinusSerif}
+	\setsansfont[ % Libertinus Serif used as sans fallback (local)
+		Scale=1,
+		Path=./fonts/,
+		Extension=.otf,
+		UprightFont=*-Regular,
+		BoldFont=*-Bold,
+		ItalicFont=*-Italic,
+		BoldItalicFont=*-BoldItalic
+	]{LibertinusSerif}
+	\setmonofont[ % Libertinus Serif used as mono fallback (local)
+		Scale=.89,
+		Path=./fonts/,
+		Extension=.otf,
+		UprightFont=*-Regular,
+		BoldFont=*-Bold,
+		ItalicFont=*-Italic,
+		BoldItalicFont=*-BoldItalic
+	]{LibertinusSerif}
 	\ifluatex
 	\else
 		\RequirePackage{morewrites} % Fix some errors related to floats (not necessary with LuaLaTeX
