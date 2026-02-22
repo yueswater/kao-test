@@ -1,5 +1,5 @@
 ---
-title: "Quarto + kaohandt: Minimal Working Example"
+title: "Quarto + kaohandt: Multilingual Font Test"
 author: "Test Author"
 date: today
 ---
@@ -40,8 +40,24 @@ $$
 e^{i\pi} + 1 = 0
 $$
 
+## Traditional Chinese (cwTeX Q Ming)
+
+以下段落測試中文繁體字型（cwTeX Q Ming）是否正確載入。
+
+本文件示範了 Quarto 搭配 XeLaTeX 引擎，透過 `xeCJK` 套件支援中文排版。
+字型使用 cwTeX Q 明體，路徑設定於 `./fonts/cwtex/`。
+這段文字應以正確的明體字形呈現，包括標點與換行規則。
+
+## Thai (Sarabun)
+
+\thai{ข้อความต่อไปนี้ทดสอบการแสดงผลภาษาไทยโดยใช้ฟอนต์ Sarabun:}
+
+\thai{สวัสดีครับ นี่คือการทดสอบภาษาไทยด้วยฟอนต์ Sarabun ซึ่งโหลดจากโฟลเดอร์ \texttt{./fonts/sarabun/} การแสดงผลควรถูกต้องทั้งตัวอักษรและวรรณยุกต์}
+
 ## Conclusion
 
-If this document compiles successfully, the `kaohandt` class is correctly
-configured for Quarto with XeLaTeX, including local `.cls` and `.sty` file
-resolution and system font support via `fontspec`.
+If this document compiles successfully, all three font stacks are working:
+
+- **English** --- Libertinus Serif from `./fonts/libertinus/`
+- **Chinese** --- cwTeX Q Ming from `./fonts/cwtex/` via `xeCJK`
+- **Thai** --- Sarabun from `./fonts/sarabun/` via `\thaifont`

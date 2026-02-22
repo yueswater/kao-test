@@ -12,11 +12,18 @@ format:
     template-partials:
       - pandoc.tex
       - tables.tex
+    latex-auto-install: false
     mainfont: "LibertinusSerif"
     mainfontoptions:
-      - "Path=./fonts/"
+      - "Path=./fonts/libertinus/"
       - "Extension=.otf"
       - "UprightFont=*-Regular"
       - "BoldFont=*-Bold"
       - "ItalicFont=*-Italic"
       - "BoldItalicFont=*-BoldItalic"
+    include-in-header:
+      - text: |
+          \usepackage{xeCJK}
+          \setCJKmainfont[Path=./fonts/cwtex/]{cwTeXQMing-Medium.ttf}
+          \newfontfamily\thaifont[Path=./fonts/sarabun/,BoldFont=Sarabun-Bold.ttf]{Sarabun-Regular.ttf}
+          \newcommand{\thai}[1]{{\thaifont #1}}
